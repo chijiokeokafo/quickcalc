@@ -1,31 +1,35 @@
-
+body {
+	background-color: black;
+}
 
 #container {
 	margin-right: auto;
 	margin-left: auto;
 	width: 400px;
-	border: 2px solid black;
+	border: 1px solid white;
 	border-radius: 8px;
 	text-align: center;
 	display: none;
-	background-color: #778899;
+	background-color: black;
+	color: white;
 	
 }
 
 #calculator {
-	background-color: #778899;
+	background-color: black;
+	colour: white;
 	border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
 	width: 200px;
-	border: 3px solid black;
+	border: 1px solid white;
 }
 
 #button {
-	color: #333;
-	background-color: #DCDCDC;
+	color: white;
+	background-color: black;
 	border-radius: 5px;
-	border: 2px solid black;
+	border: 1px solid white;
 	font-size: 12px;
 	margin-top: 5px;
 	margin-bottom: 10px;
@@ -34,7 +38,8 @@
 
 #spokemodal {
 	display: none;
-	background-color: #008080;
+	background-color: black;
+	colour: white;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 24px;
 	font-style: normal;
@@ -43,20 +48,24 @@
   margin-right: auto;
 	width: 200px;
 	cursor: pointer;
-	border: 3px solid black;
+	border: 1px solid white;
 }
 
 .calc_field {
-	border-radius: 5px;
+	border-radius: 10px;
 	outline: none;
 	padding: 6px;
+	color: black;
+	font-family: 'Rockwell Extra Bold', 'Rockwell Bold', monospace;
+	text-align: center;
+
 
 }
 
-.calc_field:focus {
+/*.calc_field:focus {
 	border: 1px solid #90EE90;
 	box-shadow: 0px 0px 3px 1px #F8F8FF;
-}
+}*/
 
 #info {
 	border-radius: 10px;
@@ -67,6 +76,8 @@
 	width: 330px;
 	border: 1px solid black;
 	background-color: white;
+	color: black;
+	font-family: 'Oswald', sans-serif;
 }
 
 #formula {
