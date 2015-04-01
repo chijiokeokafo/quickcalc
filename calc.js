@@ -51,10 +51,10 @@ function extractBuild(form){
 };
 
 $(document).ready(function(){
-	$( '#container' ).slideDown(700).css('opacity', 0.3);
-	$('#container').mouseenter(function(){
-		$(this).fadeTo('slow', 1);
-	});
+	$( '#container' ).slideDown(700);
+	// $('#container').mouseenter(function(){
+	// 	$(this).fadeTo('slow', 1);
+	// });
 
 	disableBtn();
 });

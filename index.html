@@ -15,18 +15,18 @@
 <div id="container">
 	<div id="heading">
 		<h1>SPOKIN AINT EASY</h1>	
-		<h4>All specs are in mm, as per usual.<br>Just toss the numbers in their respective fields and hit 'Do Math'</h4>
+		<h4>All specs in mm, as per usual.<br>Just toss the numbers in their respective fields and hit 'Do Math'</h4>
 		<p>Click the spoke length to reset the calc.</p>
 	</div>
 	
 	<div id="calculator" class='form-group'><br>
 		<form role="form" id='spoke_form' >
-			ERD:<br><input type="text" id='erd' class='calc_field'><br>
-			Flange ø:<input type="text" id='flange_diam' class='calc_field'><br>
-		  Flange Offset:<input type="text" id='flange_offset' class='calc_field'><br>
-		  Holes:<input type="text" id='rim_holes' class='calc_field'><br>
-		  Crosses:<input type="text" id='spoke_crosses' class='calc_field'><br>
-		  Spoke ø:<input type="text" id='spoke_hole_diam' class='calc_field'><br>
+			↓ ERD ↓<br><input type="text" id='erd' class='calc_field'><br>
+			↓ Flange ø ↓<input type="text" id='flange_diam' class='calc_field'><br>
+		  ↓ Flange Offset ↓<input type="text" id='flange_offset' class='calc_field'><br>
+		  ↓ Holes ↓<input type="text" id='rim_holes' class='calc_field'><br>
+		  ↓ Crosses ↓<input type="text" id='spoke_crosses' class='calc_field'><br>
+		  ↓ Spoke ø ↓<input type="text" id='spoke_hole_diam' class='calc_field' placeholder='eg: 2.5'><br>
 		  <input type="submit" value="Do Math" id='button'>
 		</form>
 	</div>
@@ -36,20 +36,18 @@
 	</div>
 
 	<div id="info">
-		<p>Here's the formula this calc was built with. I did some research and found this one to work pretty well. 
-		I always round my spokes up by 2mm, just to ensure a bit more strenth at the eyelet.</p>
+		Here's the formula this calc was built with. I did some research and found this one to work pretty well. 
+		I always round my spokes up by 2mm, just to ensure a bit more strenth at the eyelet.
 		<div id="formula"></div>
-		<p>l is the spoke length<br>
+		l is the spoke length<br>
 		rr is the radius of the rim<br>
 		rf is the radius of the hub flange<br>
 		f is the flange offset<br>
 		x is the number of crosses<br>
 		h is the total number of spokes in the wheel<br>
-		dh is the diameter of the spoke hole</p>
+		dh is the diameter of the spoke hole
 	</div>
 </div>	
 </body>
 </html>
-
-
 
