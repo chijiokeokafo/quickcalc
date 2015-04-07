@@ -1,15 +1,10 @@
 body {
-	background-color: mediumturquoise;
+	background-color: black;
 }
 #container {
-	margin-right: auto;
-	margin-left: auto;
 	width: auto;
-	border: 1px solid white;
-	border-radius: 8px;
+	height: auto;
 	text-align: center;
-
-	background-color: black;
 	color: white;
 }
 
