@@ -1,11 +1,14 @@
+body {
+	background-color: mediumturquoise;
+}
 #container {
 	margin-right: auto;
 	margin-left: auto;
-	width: 400px;
+	width: auto;
 	border: 1px solid white;
 	border-radius: 8px;
 	text-align: center;
-	display: none;
+
 	background-color: black;
 	color: white;
 }

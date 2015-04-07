@@ -51,7 +51,6 @@ function extractBuild(form){
 };
 
 $(document).ready(function(){
-	$('#container').slideDown(700);
 	disableBtn();
 });
 
