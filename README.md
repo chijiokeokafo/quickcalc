@@ -1,0 +1,1 @@
+hopepage for 'quickcalc'
