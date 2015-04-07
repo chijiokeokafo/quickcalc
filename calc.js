@@ -51,11 +51,7 @@ function extractBuild(form){
 };
 
 $(document).ready(function(){
-	$( '#container' ).slideDown(700);
-	// $('#container').mouseenter(function(){
-	// 	$(this).fadeTo('slow', 1);
-	// });
-
+	$('#container').slideDown(700);
 	disableBtn();
 });
 
@@ -65,12 +61,13 @@ function disableBtn() {
 		build = extractBuild($('#spoke_form'));
 		console.log(build);
 		$('#spokelength').html(Math.round(build.spokeLength()));
-		$('#spokemodal').fadeIn();
+		$('#spokemodal').slideDown("fast");
 	});
 };
 
 $(document).ready(function(){
-	$("#spokemodal").click(function() {
+	$("#spokemodal").on('click', function() {
 		$("#spoke_form")[0].reset();
+		$("#spokemodal").slideUp("fast");
 	});
 });	

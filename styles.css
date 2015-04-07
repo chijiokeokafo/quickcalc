@@ -8,7 +8,6 @@
 	display: none;
 	background-color: black;
 	color: white;
-	
 }
 
 #calculator {
@@ -28,7 +27,6 @@
 	margin-top: 10px;
 	margin-bottom: 10px;
 	background-color: black;
-
 }
 
 #spokemodal {
@@ -52,14 +50,7 @@
 	color: black;
 	font-family: 'Rockwell Extra Bold', 'Rockwell Bold', monospace;
 	text-align: center;
-
-
 }
-
-/*.calc_field:focus {
-	border: 1px solid #90EE90;
-	box-shadow: 0px 0px 3px 1px #F8F8FF;
-}*/
 
 #info {
 	border-radius: 10px;
@@ -77,7 +68,6 @@
 	height: 40px;
 	width: 330px;
 	background-image: url(images/eq_tall.png)
-
 }
 
 #heading {
