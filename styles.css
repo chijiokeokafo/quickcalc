@@ -11,8 +11,8 @@ body {
 #calculator {
 	colour: white;
 	border-radius: 10px;
-  margin-left: auto;
-  margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 	width: 200px;
 	border: 1px solid white;
 }
@@ -34,8 +34,8 @@ body {
 	font-size: 24px;
 	font-style: normal;
 	border-radius: 5px;
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+  	margin-right: auto;
 	width: 200px;
 	cursor: pointer;
 	border: 1px solid white;
@@ -52,10 +52,10 @@ body {
 
 #info {
 	border-radius: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 	width: 330px;
 	border: 1px solid white;
 	color: white;
