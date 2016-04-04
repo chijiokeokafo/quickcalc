@@ -50,23 +50,59 @@ function extractBuild(form){
 	});
 };
 
-$(document).ready(function(){
-	disableBtn();
+$(function(){
+	$('.calc_field').keyup(function(){
+		doMath();
+	});
 });
 
-function disableBtn() {
-	$("#button").click(function(e){
-		e.preventDefault();
-		build = extractBuild($('#spoke_form'));
-		console.log(build);
-		$('#spokelength').html(Math.round(build.spokeLength()));
-		$('#spokemodal').slideDown("fast");
-	});
-};
+// function disableBtn() {
+// 	$("#button").click(function(e){
+// 		e.preventDefault();
+// 		doMath();
+// 	});
+// };
 
-$(document).ready(function(){
-	$("#spokemodal").on('click', function() {
-		$("#spoke_form")[0].reset();
-		$("#spokemodal").slideUp("fast");
-	});
-});	
+function doMath(){
+	build = extractBuild($('#spoke_form'));
+	$('#spokelength').html(Math.round(build.spokeLength()));
+}
+
+$(function(){
+  $( "#container" ).draggable();
+  $( "#dragChat" ).draggable();
+
+  var messagesRef = new Firebase('http://t4wwyyyji3m.firebaseio-demo.com/');
+      messageField = $('#messageInput');
+      nameField = $('#nameInput');
+      messageList = $('#chat-messages');
+
+  messageField.keypress(function (e) {
+    if (e.keyCode == 13) {
+      var username = nameField.val();
+      var message = messageField.val();
+      // messagesRef.push(username + ' says ' + message);
+      messagesRef.push({name:username, text:message});
+      messageField.val('');
+    }
+  });
+  // Add a callback that is triggered for each chat message.
+  messagesRef.on('child_added', function (snapshot) {
+    //GET DATA
+    var data = snapshot.val();
+    var username = data.name || "anon";
+    var message = data.text || "***";
+
+    //CREATE ELEMENTS MESSAGE & SANITIZE TEXT
+    var messageElement = $("<li>");
+    var nameElement = $("<strong class='example-chat-username'></strong>")
+    nameElement.text(username);
+    messageElement.text(message).prepend(nameElement);
+
+    //ADD MESSAGE
+    messageList.append(messageElement)
+
+    //SCROLL TO BOTTOM OF MESSAGE LIST
+    messageList[0].scrollTop = messageList[0].scrollHeight;
+  });
+});

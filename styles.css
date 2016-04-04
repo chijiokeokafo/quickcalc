@@ -1,73 +1,264 @@
 body {
-	background-color: black;
+	background-color: #003366;
+	background-image: url('pattern.png');
+	color: #3fb0ac;
 }
+
 #container {
-	width: auto;
-	height: auto;
+	width: 350px;
+	height: 60%;
 	text-align: center;
-	color: white;
-}
-
-#calculator {
-	colour: white;
-	border-radius: 10px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 200px;
-	border: 1px solid white;
-}
-
-#button {
-	color: white;
-	border-radius: 5px;
-	border: 1px solid white;
-	font-size: 12px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	background-color: black;
-}
-
-#spokemodal {
-	display: none;
-	colour: white;
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 24px;
-	font-style: normal;
-	border-radius: 5px;
-    margin-left: auto;
-  	margin-right: auto;
-	width: 200px;
-	cursor: pointer;
-	border: 1px solid white;
-}
-
-.calc_field {
-	border-radius: 10px;
-	outline: none;
-	padding: 6px;
 	color: black;
-	font-family: 'Rockwell Extra Bold', 'Rockwell Bold', monospace;
-	text-align: center;
-}
-
-#info {
-	border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-	width: 330px;
-	border: 1px solid white;
-	color: white;
-	font-family: 'Oswald', sans-serif;
-}
-
-#formula {
-	height: 40px;
-	width: 330px;
-	background-image: url(images/eq_tall.png)
+	border-radius: 5px;
+	background-color: #7F909A;
+	padding: 2em;
+	margin: 2em;
+  background: -webkit-linear-gradient(left, #686868, #787878);
+  background: -moz-linear-gradient(left, #686868, #787878);
+  background: -ms-linear-gradient(left, #686868, #787878);
+  background: -o-linear-gradient(left, #686868, #787878);
 }
 
 #heading {
-	font-family: 'Oswald', sans-serif;
+	height:100px;
+	margin-bottom: 8em;
 }
+
+#img { 
+	max-width: 300px; 
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.svg {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 20s ease-out forwards;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.svg2 { display: none;}
+  
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1000;
+    -ms-transform: scale(1,1);
+    -webkit-transform: scale(1,1); 
+    transform: scale(1,1); 
+  }
+  to {
+    stroke-dashoffset: 0;
+    -ms-transform: scale(1.125,1.125);
+    -webkit-transform: scale(1.125,1.125); 
+    transform: scale(1.125,1.125);
+  }
+}
+
+#spokemodal {
+	color: black;
+	background-color: #F5F5F5;
+	font-family: 'Cousine';
+	font-size: 24px;
+	text-align: right;
+	font-style: normal;
+	border-radius: 4px;
+	margin: 0.25em auto 0.5em auto;
+ 	padding: 10px 5px 5px;
+	width: 200px;
+	box-shadow: inset 1px 1px 7px #000;
+}
+
+
+#calculator {
+	background-color: #686868;
+	border-radius: 4px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+	font-family: 'Tahoma';
+	text-align: left;
+	padding-bottom: 2em;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	transition: all 0.2s ease-in-out;
+}
+
+/*#calculator:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}*/
+
+#calculator>.form {
+	text-align: left;
+}
+
+.calc_field {
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	margin: 0.7em auto 0.7em;
+	padding: 6px;
+	color: black;
+	background-color: #F5F5F5;
+	font-family: 'Rockwell', monospace;
+	text-align: center;
+	box-shadow: inset 1px 1px 1px #000;
+	width: 90%;
+}
+
+#spoke-form {padding: 0.5em;}
+
+form { 
+	padding-top: 1em;
+	padding-left: 1.35em;
+}
+
+.form { 
+	-webkit-animation: fade-in 1s 1s linear forwards;
+	animation: fade-in 1s 1s linear forwards;	
+	  -webkit-transform: translateX(-1em);
+	  -ms-transform: translateX(-1em);
+	  transform: translateX(-1em);
+	  opacity: 0;
+	  -webkit-animation-fill-mode: forwards;
+	  animation-fill-mode: forwards; 
+} 
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-10em);
+    transform: translateX(-10em);
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.text>.form { padding: 0; }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.text { 
+	font-family: 'Arvo', sans-serif;
+	font-size: 28px;
+	font-style: normal; 
+	color: #303030;
+}
+
+/*MOBILE STYLES*/
+
+@media screen and (max-width: 500px) {
+	
+	html,body { 
+		margin:0; 
+		padding:0; 
+		height:100%; 
+		width:100%; 
+		background: -webkit-linear-gradient(left, #686868, #787878);
+		background: -moz-linear-gradient(left, #686868, #787878);
+		background: -ms-linear-gradient(left, #686868, #787878);
+		background: -o-linear-gradient(left, #686868, #787878);
+	}
+
+	#container {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+		height: auto;
+		padding: 0;
+	}
+
+	#img {
+		position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+		top: -1em;
+		width: 300px;
+		height: 100px;
+	}
+
+	.svg { display: none; }
+
+	.svg2 { 
+		display: flex;
+		stroke-dasharray: 1000;
+		stroke-dashoffset: 1000;
+		animation: draw-two 10s ease-out forwards;
+	}
+
+	@keyframes draw-two {
+	  from {
+	    stroke-dashoffset: 1000;
+	  }
+	  to {
+	    stroke-dashoffset: 0;
+	  }
+	}
+
+	#spokemodal {
+		position: absolute;
+		top: 4.5em;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+		font-size: 20px;
+		width: 90%;
+		text-align: center;
+	}
+
+	form {
+		text-align: left;
+	}
+
+	span.form { display: none; }
+
+	#calculator {
+		left: 0;
+		right: 0;
+		margin-top: -7.5em;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		background-color: inherit;
+		box-shadow: none;
+	}
+
+	.calc_field {
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+	}
+
+	.text>span.form {
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		display: inline;
+		font-size: 20px;
+	}
+}
+
+#messages {
+  width: 400px;
+  height: 300px;
+  background-color: #F5F5F5;
+}
+
