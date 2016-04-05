@@ -70,39 +70,39 @@ function doMath(){
 
 $(function(){
   $( "#container" ).draggable();
-  $( "#dragChat" ).draggable();
+  // $( "#dragChat" ).draggable();
 
-  var messagesRef = new Firebase('http://t4wwyyyji3m.firebaseio-demo.com/');
-      messageField = $('#messageInput');
-      nameField = $('#nameInput');
-      messageList = $('#chat-messages');
+  // var messagesRef = new Firebase('http://xxxxxxxxxxxx.firebaseio-demo.com/');
+  //     messageField = $('#messageInput');
+  //     nameField = $('#nameInput');
+  //     messageList = $('#chat-messages');
 
-  messageField.keypress(function (e) {
-    if (e.keyCode == 13) {
-      var username = nameField.val();
-      var message = messageField.val();
-      // messagesRef.push(username + ' says ' + message);
-      messagesRef.push({name:username, text:message});
-      messageField.val('');
-    }
-  });
-  // Add a callback that is triggered for each chat message.
-  messagesRef.on('child_added', function (snapshot) {
-    //GET DATA
-    var data = snapshot.val();
-    var username = data.name || "anon";
-    var message = data.text || "***";
+  // messageField.keypress(function (e) {
+  //   if (e.keyCode == 13) {
+  //     var username = nameField.val();
+  //     var message = messageField.val();
+  //     // messagesRef.push(username + ' says ' + message);
+  //     messagesRef.push({name:username, text:message});
+  //     messageField.val('');
+  //   }
+  // });
+  // // Add a callback that is triggered for each chat message.
+  // messagesRef.on('child_added', function (snapshot) {
+  //   //GET DATA
+  //   var data = snapshot.val();
+  //   var username = data.name || "anon";
+  //   var message = data.text || "***";
 
-    //CREATE ELEMENTS MESSAGE & SANITIZE TEXT
-    var messageElement = $("<li>");
-    var nameElement = $("<strong class='example-chat-username'></strong>")
-    nameElement.text(username);
-    messageElement.text(message).prepend(nameElement);
+  //   //CREATE ELEMENTS MESSAGE & SANITIZE TEXT
+  //   var messageElement = $("<li>");
+  //   var nameElement = $("<strong class='example-chat-username'></strong>")
+  //   nameElement.text(username);
+  //   messageElement.text(message).prepend(nameElement);
 
-    //ADD MESSAGE
-    messageList.append(messageElement)
+  //   //ADD MESSAGE
+  //   messageList.append(messageElement)
 
-    //SCROLL TO BOTTOM OF MESSAGE LIST
-    messageList[0].scrollTop = messageList[0].scrollHeight;
-  });
+  //   //SCROLL TO BOTTOM OF MESSAGE LIST
+  //   messageList[0].scrollTop = messageList[0].scrollHeight;
+  // });
 });
