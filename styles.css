@@ -156,7 +156,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 /*MOBILE STYLES*/
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
 	
 	html,body { 
 		margin:0; 
@@ -173,7 +173,7 @@ input[type=number]::-webkit-outer-spin-button {
 		position: absolute;
 		top: 0;
 		bottom: 0;
-		width: 100%;
+		/*width: 100%;*/
 		height: auto;
 		padding: 0;
 	}
@@ -254,11 +254,44 @@ input[type=number]::-webkit-outer-spin-button {
 		display: inline;
 		font-size: 20px;
 	}
+
+	#dragChat {
+		display: none;
+	}
 }
 
 #messages {
   width: 400px;
   height: 300px;
   background-color: #F5F5F5;
+}
+
+.chatContainer {
+	top: -918px;
+  left: 410px;
+  width: 500px;
+  margin: 40px auto 0px auto;
+  display: inline-block;	
+  font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  border-radius: 3px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  background-color: #dfe3ea;
+  border: 1px solid #CCC;
+  overflow: auto;
+  padding: 0px;
+  font-size: 18px;
+  line-height: 22px;
+  color: #666;
+}
+
+ul#chat-messages,
+#dragChat .example-chat-toolbar,  
+#dragChat footer {
+	background-color: #686868;
+	color: #000;
+}
+
+#dragChat .example-chat-toolbar {
+	border-bottom: none;
 }
 
